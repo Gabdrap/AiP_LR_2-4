@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	int choose;
+	cout << "Выберите задание: " << '\n';
+	cin >> choose;
+	if (choose == 1) {
+		int ival = 1024;
+		int ival2 = 2048;
+		int* pi1 = &ival, * pi2 = &ival2, ** pi3 = 0;
+
+		//ival = *pi3; // значения типа int * нельзя присвоить сущности типа int
+		//*pi2 = *pi3; // значения типа int * нельзя присвоить сущности типа int
+		//ival = pi2; // значения типа int * нельзя присвоить сущности типа int
+		//pi2 = *pi1; // значения типа int * нельзя присвоить сущности типа int
+		//pi1 = pi3; // значения типа int * нельзя присвоить сущности типа int
+		//ival = *pi1; //проблем нет
+		//pi1 = ival; // значения типа int * нельзя присвоить сущности типа int
+		//pi3 = &pi2; // проблем нет
+	}
+	if (choose == 2) {
+		int func(int* pi) {
+			*pi = 1024;
+			return *pi;
+		}
+
+		void main() {
+			int* pi2 = 0;
+			int ival = func(pi2);
+			return 0;
+		}
+	}
+}
