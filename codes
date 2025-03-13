@@ -4,11 +4,12 @@
 
 using namespace std;
 
-int main(){
+int main() {
+	setlocale(LC_ALL, "Russian");
 	int a;
-	cout << "Введите число: " << endl;
+	cout << "Введите число: ";
 	cin >> a;
 	int* ptr = &a;
-	cout << *ptr;
-	cout << &a;
+	cout << *ptr << '\n';
+	cout << &a << '\n';
 }
