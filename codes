@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main(){
+	int a;
+	cout << "Введите число: " << endl;
+	cin >> a;
+	int* ptr = &a;
+	cout << *ptr;
+	cout << &a;
+}
