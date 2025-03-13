@@ -2,6 +2,11 @@
 
 using namespace std;
 
+int func(int* pi) {
+	*pi = 1024;
+	return *pi;
+}
+
 int main() {
 	setlocale(LC_ALL, "Russian");
 	int choose;
@@ -12,7 +17,7 @@ int main() {
 		int ival2 = 2048;
 		int* pi1 = &ival, * pi2 = &ival2, ** pi3 = 0;
 
-		//ival = *pi3; // значения типа int * нельзя присвоить сущности типа int
+		//ival = *pi3; // попытка 
 		//*pi2 = *pi3; // значения типа int * нельзя присвоить сущности типа int
 		//ival = pi2; // значения типа int * нельзя присвоить сущности типа int
 		//pi2 = *pi1; // значения типа int * нельзя присвоить сущности типа int
@@ -22,15 +27,9 @@ int main() {
 		//pi3 = &pi2; // проблем нет
 	}
 	if (choose == 2) {
-		int func(int* pi) {
-			*pi = 1024;
-			return *pi;
-		}
-
-		void main() {
-			int* pi2 = 0;
-			int ival = func(pi2);
-			return 0;
-		}
+		int i = 0;
+		int* pi2 = &i;
+		int ival = func(pi2);
+		return 0;
 	}
 }
