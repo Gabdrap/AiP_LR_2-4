@@ -6,10 +6,20 @@ using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "Russian");
-	int a;
+	/*/int a;
 	cout << "Введите число: ";
 	cin >> a;
 	int* ptr = &a;
 	cout << *ptr << '\n';
 	cout << &a << '\n';
+	(*ptr)++;
+	cout << *ptr;*/
+
+	char a;
+	char *ptr = &a;
+
+	a = 'f\n';
+	cout << a << '\n';
+	(*ptr)++;
+	cout << "Измененный символ: " << *ptr << endl;
 }
